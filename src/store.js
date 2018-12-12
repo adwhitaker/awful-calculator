@@ -21,9 +21,7 @@ export default new Vuex.Store({
     },
     mutations: {
         [types.ADD_NUMBER](state, newAmount) {
-            if (state.total > 0) {
-                state.counter = state.counter + 1
-            }
+            state.counter = state.counter + 1
             state.total = state.total + newAmount
             state.input = ''
         },
@@ -35,8 +33,8 @@ export default new Vuex.Store({
         [types.ADD_NUMBER]({ commit, state }) {
             commit(types.ADD_NUMBER, Number(state.input))
         },
-        [types.UPDATE_INPUT]({commit}, value) {
+        [types.UPDATE_INPUT]({ commit }, value) {
             commit(types.UPDATE_INPUT, value)
-        }
+        },
     },
 })
